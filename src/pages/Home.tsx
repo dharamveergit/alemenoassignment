@@ -29,11 +29,14 @@ const Home = () => {
             the readable content of a page when looking at its layout.
           </p>
           <div className="flex gap-3">
-            <button className="bg-primary rounded-full px-8 py-3 text-white text-sm hover:bg-blue-600 transition duration-200">
+            <button
+              onClick={() => {
+                const element = document.getElementById("courses");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-primary rounded-full px-8 py-3 text-white text-sm hover:bg-blue-600 transition duration-200"
+            >
               Get Started
-            </button>
-            <button className="bg-gray-100 px-6 py-2 rounded-full text-sm hover:bg-gray-200 transition duration-200">
-              Learn More
             </button>
           </div>
         </div>
@@ -41,7 +44,7 @@ const Home = () => {
           <img src="/hero2.png" alt="hero" className="w-[75%]" />
         </div>
       </section>
-      <section className="bg-primary py-10 md:py-14">
+      <section className="bg-primary py-10 md:py-14" id="courses">
         <div className="container flex flex-col gap-10 md:gap-14 items-center">
           <h1 className="text-2xl md:text-4xl font-semibold text-white text-center">
             Explore Our Courses
