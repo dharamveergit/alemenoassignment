@@ -98,7 +98,7 @@ const AddDataToFirebase = () => {
   return (
     <form
       className="flex flex-col gap-6 container md:w-1/2 border p-5 rounded-lg mb-6"
-      onSubmit={handleSubmit(async (data) => {
+      onSubmit={handleSubmit(async (data: any) => {
         const values = {
           ...data,
           prerequisites: [
