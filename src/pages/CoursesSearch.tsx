@@ -34,7 +34,7 @@ const CoursesSearch = () => {
       <section className="container py-10 flex flex-col gap-6">
         <h1 className="text-2xl font-semibold text-white">Search Courses</h1>
         {!filtered?.length && <p className="text-white">No courses found.</p>}
-        {!isLoading && <HomeLoading />}
+        {isLoading && <HomeLoading />}
         <ul className="grid md:grid-cols-3 gap-6">
           {filtered?.map((course: any) => (
             <CourseCard course={course} key={course.id} />
